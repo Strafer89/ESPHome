@@ -1,0 +1,35 @@
+#substitutions:
+ # disp_name: Light Switch  # Change the disp_name to something you want
+  #devicename: lightswitch  #The device's name, MUST BE LOWERCASE!!!!
+
+esphome:
+  name: light-switch
+
+esp32:                #These lines should match your board
+  board: featheresp32  #
+  #framework:
+  #  type: arduino
+
+wifi:
+  ssid: "This Network"  #Put your WiFi SSID here.
+  password: "****" #Put your WiFi password here.
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Light Switch Hotspot"
+    password: "adminpassword" #Create a password for the Hotspot mode
+
+captive_portal:
+
+
+logger:  # Enable logging
+
+
+api:  # Enable Home Assistant API
+
+ota:    # Enable Over The Air updates
+  password: "otapasstime"    # Create an OTA Password if desired to lock updates
+  
+
+web_server:  #Display information available on a web page to troubleshoot directly or access via web page.  The Sensor information will be displayed in a table along with a debug log.
+  port: 80
